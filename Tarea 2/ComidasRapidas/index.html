@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <title>Comidas rápidas</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="titulo">Comidas rápidas <span>Web Cliente</span> </h1>
+    </header>
+
+    <div class="nav-bg">
+        <nav class="navegacion-principal contenedor">
+            <a href="#">Inicio</a>
+            <a href="#">Productos</a>
+            <a href="#">Promociones</a>
+            <a href="#">Contacto</a>
+        </nav>
+    </div>
+
+    <section class="principal">
+        <div class="contenido-principal">
+            <h2>Web cliente Servidor</h2>
+
+            <div class="ubicacion">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                        clip-rule="evenodd"></path>
+                </svg>
+            </div>
+            <p>Heredia, Costa Rica</p>
+            <a class="boton" href="#" class="boton">Contactar</a>
+        </div>
+    </section>
+
+    <div class="servicios">
+
+        <h2>Servicios</h2>
+        <div class="servicios-container">
+
+            <div class="servicios-item">
+                <h3 style="color: rgb(138, 138, 138);">Servicio Express</h3>
+                <svg style="width: 13rem; height: 13rem" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6">
+                    </path>
+                </svg>
+                <p>Disfruta del servicio express de nuestros platillos para disfrutar del gran sabor de nuestra cocina
+                    desde la comodidad de tu casa. Buscanos en todas las plataformas de pedidos a domilicio.</p>
+            </div>
+
+            <div class="servicios-item">
+                <h3 style="color: rgb(138, 138, 138);">Eventos Especiales</h3>
+                <svg style="width: 13rem; height: 13rem" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
+                    </path>
+                </svg>
+                <p>Contactenos para agendar y organizar servicios de alimentacion para sus eventos especiales con una
+                    numerosa variedad de estilos culinarios y sabores que se ajustan a cada ocasion.</p>
+            </div>
+
+            <div class="servicios-item">
+                <h3 style="color: rgb(138, 138, 138);">Tutorias</h3>
+                <svg style="width: 13rem; height: 13rem" fill="none" stroke="black" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
+                    <path
+                        d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z">
+                    </path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222">
+                    </path>
+                </svg>
+                <p>La cocina es para compartir. Por eso, contamos con un equipo de especialistas en la cocina dedicados
+                    a compartir su pasion por la cocina al transmitir su conocimiento a los demas. Se imparten desde
+                    talleres cortos hasta cursos de multiples sesiones segun se acomode su agenda. Contactenos para mas
+                    informacion y estar al tanto de nuevas actividades.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <h2>Contacto</h2>
+        <form class="contacto">
+            <h3>Contactenos llenando todos los campos</h3>
+            <div style="display: flex;flex-direction: row;">
+                <label class="contacto-field-label" for="nombre">Nombre: </label>
+                <input class="contacto-field" type="text" id="nombre" name="nombre">
+                <label class="contacto-field-label" for="telefono">Telefono: </label>
+                <input class="contacto-field" type="text" id="telefono" name="telefono">
+                <label class="contacto-field-label" for="correo">Correo electronico: </label>
+                <input class="contacto-field" type="text" id="correo" name="correo">
+            </div>
+
+            <label for="mensaje">Mensaje: </label>
+            <textarea class="contacto-field-large" name="mensaje"></textarea>
+            <input class="contacto-boton" type="submit" value="Enviar">
+
+        </form>
+    </footer>
+
+</body>
+
+</html>

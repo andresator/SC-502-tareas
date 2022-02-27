@@ -1,0 +1,16 @@
+.centrado{
+    text-align: center;
+}
+
+.derecha{
+    text-align: right;
+}
+
+.marcado{
+    background-color: yellow;
+    font-weight: bold;
+    font-size: 18pt;
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 1.5in;
+    margin-right: 1.5in;
+}

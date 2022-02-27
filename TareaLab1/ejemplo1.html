@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo Lab 1</title>
+    <script src="js/script1.js"></script>
+    
+</head>
+<style>
+    label{
+        margin: auto;
+    }
+
+</style>
+<body>
+
+    <h3>Ingrese un nuevo vehiculo al sistema:</h3>
+	<label>Marca del vehiculo: 
+        <input name="make" type="text" id="make" /> <br>
+    </label>
+
+    <label>Modelo del vehiculo: 
+        <input name="model" type="text" id="model" /> <br>
+    </label>
+
+    <label>Año de fabricacion: 
+        <input name="year" type="text" id="year" /> <br>
+    </label>
+
+    <label>Color del vehiculo: 
+        <input name="colorCar" type="text" id="colorCar" /> <br>
+    </label>
+
+    <label>Cantidad por agregar: 
+        <input name="count" type="text" id="count" /> 
+    </label>
+	
+	<input type="button" value="Agregar auto"  onclick="addCar();"> <br>
+
+	<p id="list" />
+    
+</body>
+</html>
