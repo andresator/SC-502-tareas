@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
+
+    <!--  El preloadvalor del atributo <link>del elemento le relpermite 
+    declarar solicitudes de recuperación en el HTML <head>, especificando
+    los recursos que su página necesitará muy pronto, que desea comenzar
+    a cargar temprano en el ciclo de vida de la página, antes de que se
+    active la maquinaria de representación principal de los navegadores.
+    Esto garantiza que sean disponibles antes y es menos probable que bloqueen
+    el procesamiento de la página, lo que mejora el rendimiento. -->
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Comidas rápidas</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="titulo">Comidas rápidas <span>Web Cliente</span> </h1>
+    </header>
+
+    <div class="nav-bg">
+        <nav class="navegacion-principal contenedor">
+            <a href="#">Inicio</a>
+            <a href="#">Login</a>
+            <a href="#">Inscripcion</a>
+            <a href="#">Contacto</a>
+        </nav>
+    </div>
+
+    <main class="contenedor sombre">
+        <section>
+            <h2>Ingreso al sistema</h2>
+            <form class="formulario" action="main.html">
+                <fieldset>
+                    <legend>Favor completar los campos</legend>
+                    <div class="contenedor-login">
+                        <div class="campo">
+                            <label for="usuario">Nombre</label>
+                            <input class="input-text" type="text" id="usuario" placeholder="Tu usuario">
+                        </div>
+
+                        <div class="campo">
+                            <label for="password">Contraseña</label>
+                            <input class="input-text" type="password" id="password" placeholder="Tu contraseña">
+                        </div>
+                    </div>
+
+                    <div class="enviar">
+                        <!-- igual <button type="submit">Enviar</button> -->
+                        <input class="boton" type="submit" id="boton" value="Enviar">
+                    </div>
+
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Todos los derechos reservados ufidelitas SC-502</p>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
