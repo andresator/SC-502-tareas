@@ -1,9 +1,12 @@
+//Obtener los elementos por query selector
+
 const nombre = document.querySelector('#nombre');
 const telefono = document.querySelector('#telefono');
 const email = document.querySelector('#email');
 const mensaje = document.querySelector('#mensaje');
 const formulario = document.querySelector('.formulario'); 
 
+//Crea un objeto datos que contiene los campos a recibir del usuario
 
 const datos = {
     nombre: '',
@@ -12,10 +15,13 @@ const datos = {
     mensaje: ''
 }
 
+//Definicion de los event listener input de los elementos html
 nombre.addEventListener('input', leerDatos);
 telefono.addEventListener('input', leerDatos);
 email.addEventListener('input', leerDatos);
 mensaje.addEventListener('input', leerDatos);
+
+//Al recibir el evento submit del formulario, js ejecuta la validacion de la entrada de datos con una funcion anonima
 
 formulario.addEventListener('submit', function (evento) {
     evento.preventDefault();
@@ -23,33 +29,53 @@ formulario.addEventListener('submit', function (evento) {
     //Validación de formulario
 
     const { nombre, telefono, email, mensaje } = datos;
-    let regName = /^[a-zA-Z\-]+$/;
+    let regName = / \b([A-ZÀ-ÿ][-,a-z. ']+[ ]*)+/;
+    let regPhone = /^\d{8}$/;
+    let regMail = /^\S+@\S+$/;
 
-    if(usuario ==='' || password ===''){
+
+    if(nombre ==='' || telefono ==='' || email === '' || mensaje === ''){
         errorMensaje('Todos los campos son obligatorios');
         return false;
     }
-    if (!(usuario.length > 8 && regName.test(usuario))){
-        errorMensaje('Usuario no cumple con requisitos minimos.');
-        return false;
-    }
-    if(!(regPassw.test(password))){
-        errorMensaje('Contraseña no cumple requisitos minimos.');
+
+    if (!(regName.test(nombre))){
+        errorMensaje('El nombre no es válido.');
         return false;
     }
 
-    setCookie('usuario', usuario, 30);
-    sessionStorage.usuario = usuario;
-    localStorage.password = password;
+    if(!(regPhone.test(telefono))){
+        errorMensaje('Telefono debe ser formato 12345678.');
+        return false;
+    }
 
-    console.log(getCookie('usuario'));
+    if(!(regMail.test(email))){
+        errorMensaje('El correo no es válido.');
+        return false;
+    }
 
+    //Creacion de cookies y de almacenamiento local y session
+    setCookie('nombre', nombre, 30);
+    sessionStorage.nombre = nombre;
+    localStorage.nombre = nombre;
+
+    setCookie('telefono', telefono, 30);
+    sessionStorage.telefono = telefono;
+    localStorage.telefono = telefono;
+
+    setCookie('email', email, 30);
+    sessionStorage.email = email;
+    localStorage.email = email;
+
+    confirmacionMensaje('¡Mensaje enviado correctamente!')
     return true;    
 });
 
 function leerDatos(e) {
     datos[e.target.id] = e.target.value;
 }
+
+//Funcion generadora de mensaje de error, aplica la clase error del css
 
 function errorMensaje(mensaje) {
     const error = document.createElement('P');
@@ -62,6 +88,21 @@ function errorMensaje(mensaje) {
 
     setTimeout(function() {
         error.remove();
+    }, (5000));
+}
+
+//Funcion generadora de mensaje de confirmacion, aplica la clase confirmacion del css
+function confirmacionMensaje(mensaje) {
+    const confirmacion = document.createElement('P');
+    confirmacion.textContent = mensaje;
+    confirmacion.classList.add('correcto');
+
+    formulario.appendChild(confirmacion);
+
+    //desaparecer después de 5 segundos
+
+    setTimeout(function() {
+        confirmacion.remove();
     }, (5000));
 }
 
